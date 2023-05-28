@@ -1,7 +1,4 @@
 """
-import java.util.Date;
-
-public class Ex3 {
     public static void main(String[] args) {
         for (int i = 10000; i <= 100000; i = i + 10000) {
             int[] array = new int[i];
@@ -24,5 +21,4 @@ public class Ex3 {
                     quickSortDuration);
         }
     }
-}
 """

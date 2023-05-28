@@ -5,7 +5,6 @@ def combinationCount(count, faces):
     else:
         return 0
 
-
 #  Вариант с 4 кубами
 def recursiveCounter(depth, maxDepth, faces):
     count = 0
@@ -17,7 +16,7 @@ def recursiveCounter(depth, maxDepth, faces):
     return count
 
 
-count = 5
+count = 3
 faces = 6
 print("Количество комбинаций: {1} для {0} кубиков"
       .format(count, combinationCount(count, faces)))
