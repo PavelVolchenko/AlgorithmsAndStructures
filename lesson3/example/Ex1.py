@@ -1,12 +1,13 @@
+from dataclasses import dataclass
+
+@dataclass
 class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
+    data: object = None
+    next: object = None
 
-
+@dataclass
 class LinkedList:
-    def __init__(self):
-        self.head = None
+    head: object = None
 
     def append(self, data):
         new_node = Node(data)
@@ -23,6 +24,7 @@ class LinkedList:
         while current:
             print(current.data, end=' ')
             current = current.next
+        print()
 
 
 arr = LinkedList()

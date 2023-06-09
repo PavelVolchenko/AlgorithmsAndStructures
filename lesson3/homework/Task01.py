@@ -1,12 +1,13 @@
+from dataclasses import dataclass
+
+@dataclass
 class Node:
-    def __init__(self, data=None):
-        self.data = data
-        self.next = None
+    data: object = None
+    next: object = None
 
-
+@dataclass
 class LinkedList:
-    def __init__(self):
-        self.head = None
+    head: object = None
 
     def append(self, data):
         new_node = Node(data)
@@ -25,13 +26,10 @@ class LinkedList:
             current = current.next
         print()
 
-    def reverse_list(self):
-        tail = None
+    def reverse_list(self, tail=None):
         current = self.head
         while current:
-            temp = current.next
-            current.next = tail
-            tail = current
+            temp, current.next, tail = current.next, tail, current
             current = temp
         self.head = tail
 
